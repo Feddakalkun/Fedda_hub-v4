@@ -8,7 +8,7 @@ echo  ============================================
 echo.
 
 :: ── 1. Git pull ──────────────────────────────────────────────────────────────
-echo [1/3] Pulling latest code from GitHub...
+echo [1/4] Pulling latest code from GitHub...
 git pull
 if errorlevel 1 (
     echo  WARNING: git pull failed — continuing anyway.
@@ -16,7 +16,7 @@ if errorlevel 1 (
 
 :: ── 2. Backend deps ──────────────────────────────────────────────────────────
 echo.
-echo [2/3] Updating backend dependencies...
+echo [2/4] Updating backend dependencies...
 if not exist "venv\Scripts\activate.bat" (
     echo  No venv found — run install.bat first.
     pause & exit /b 1
@@ -27,7 +27,7 @@ echo  Backend deps up to date.
 
 :: ── 3. Frontend deps ─────────────────────────────────────────────────────────
 echo.
-echo [3/3] Updating frontend dependencies...
+echo [3/4] Updating frontend dependencies...
 pushd frontend
 npm install --no-audit --no-fund --silent
 popd
