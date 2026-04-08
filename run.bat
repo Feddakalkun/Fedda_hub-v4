@@ -22,14 +22,14 @@ call venv\Scripts\activate.bat
 
 :: ── 2. Start backend in a new window ─────────────────────────────────────────
 echo [1/2] Starting backend (port 8000)...
-start "Fedda Backend" cmd /k "call venv\Scripts\activate.bat && python backend\agent.py"
+start "Fedda Backend" cmd /k "cd /d "%~dp0" && call venv\Scripts\activate.bat && python backend\agent.py"
 
 :: Give backend a moment to bind
-timeout /t 2 /nobreak >nul
+timeout /t 3 /nobreak >nul
 
 :: ── 3. Start frontend dev server ─────────────────────────────────────────────
 echo [2/2] Starting frontend (Vite dev)...
-start "Fedda Frontend" cmd /k "cd frontend && npm run dev"
+start "Fedda Frontend" cmd /k "cd /d "%~dp0frontend" && npm run dev"
 
 :: Give Vite a moment to start
 timeout /t 3 /nobreak >nul
