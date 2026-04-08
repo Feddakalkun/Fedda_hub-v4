@@ -11,4 +11,4 @@ export interface OllamaModel {
   modified_at: string
 }
 
-export type Page = 'chat' | 'image' | 'video' | 'settings'
+export type Page = 'chat' | 'image' | 'video' | 'companion' | 'settings'

@@ -47,9 +47,14 @@ if errorlevel 1 (
 popd
 echo  Frontend deps installed.
 
-:: ── 3. Done ──────────────────────────────────────────────────────────────────
+:: ── 3. ComfyUI custom nodes ──────────────────────────────────────────────────
 echo.
-echo [3/3] All done!
+echo [3/3] Installing ComfyUI custom nodes...
+powershell -ExecutionPolicy Bypass -File "%~dp0nodes.ps1"
+
+:: ── 4. Done ──────────────────────────────────────────────────────────────────
+echo.
+echo [4/4] All done!
 echo.
 echo  Run  run.bat  to start Fedda Hub v4.
 echo.

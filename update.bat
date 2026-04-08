@@ -33,6 +33,11 @@ npm install --no-audit --no-fund --silent
 popd
 echo  Frontend deps up to date.
 
+:: ── 4. ComfyUI custom nodes ──────────────────────────────────────────────────
+echo.
+echo [4/4] Updating ComfyUI custom nodes...
+powershell -ExecutionPolicy Bypass -File "%~dp0nodes.ps1" -Update
+
 echo.
 echo  Update complete! Run  run.bat  to start.
 echo.

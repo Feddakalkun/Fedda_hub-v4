@@ -1,11 +1,12 @@
-import { MessageSquare, Image, Video, Settings } from 'lucide-react'
+import { MessageSquare, Image, Video, Settings, Heart } from 'lucide-react'
 import type { Page } from '../../types'
 
 const NAV: { id: Page; icon: React.ElementType; label: string; color: string }[] = [
-  { id: 'chat',     icon: MessageSquare, label: 'Chat',     color: '#a78bfa' },
-  { id: 'image',    icon: Image,         label: 'Image',    color: '#f472b6' },
-  { id: 'video',    icon: Video,         label: 'Video',    color: '#38bdf8' },
-  { id: 'settings', icon: Settings,      label: 'Settings', color: '#94a3b8' },
+  { id: 'chat',      icon: MessageSquare, label: 'Chat',      color: '#a78bfa' },
+  { id: 'companion', icon: Heart,         label: 'Companion', color: '#f472b6' },
+  { id: 'image',     icon: Image,         label: 'Image',     color: '#f472b6' },
+  { id: 'video',     icon: Video,         label: 'Video',     color: '#38bdf8' },
+  { id: 'settings',  icon: Settings,      label: 'Settings',  color: '#94a3b8' },
 ]
 
 interface Props {
