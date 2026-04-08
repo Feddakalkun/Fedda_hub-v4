@@ -102,7 +102,7 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], all
 app.include_router(tts_router)
 app.include_router(stt_router)
 app.include_router(comfy_router, prefix="/comfy")
-app.include_router(companion_router, prefix="/api")
+app.include_router(companion_router)
 
 # ── Tool definitions sent to Ollama ─────────────────────────────────────────
 
